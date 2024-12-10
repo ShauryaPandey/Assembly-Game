@@ -2,6 +2,8 @@
 **DanceToTheVinyl**: An interactive game made with Motorola 68000 assembly language
 The context of the game is that you play Michael Jackson; vinyl records fall from the top, some of which are genuine records while others are broken ones. Each time MJ catches a genuine record, he will start singing one of his popular/my favorite songs, and he'll also dance to the beats. You are responsible for controlling MJ, i.e., making him dodge the broken records and catch the genuine ones, all while the counter is going on, by the end of which you must collect 10 of MJ's songs. This game runs at 20 fps.
 
+Video of gameplay: https://drive.google.com/file/d/1VM5agTEWF2JABMCG8tbehukb4tf8hjbg/view
+
 Why I worked on this project:
 I did this project in 3 weeks as part of my assembly course at Florida Interactive Entertainment Academy. The project was implemented on Eas68K, which is a simulator for 68000 made for educational purposes. I am grateful to Jeremy Paulding for mentoring me and teaching the core concepts of assembly programming. 
 
