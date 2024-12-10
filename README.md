@@ -31,6 +31,7 @@ You have 60 seconds to collect 10 songs and make sure to dance sufficiently so t
 
 I am a huge huge Michael Jackson fan (as are millions of people even today), so when in my Game programming class Jeremy asked the each of us to take up a game idea and create a game design document of either an existing game or an original, I first thought of one of those standard mobile games where you have a basket and you must dodge the bombs while collecting the fruits. I reconciled that basic premise with my deep desire to make a Michael Jackson game. Throughtout the 3 weeks of development I listend to so much of MJ that it made the development process a thrilling journey! 
 Three cheers for the King of Pop!
+
 ![image](https://github.com/user-attachments/assets/38195a15-3786-4312-ab3c-df9d11ea2b80)
 
 
