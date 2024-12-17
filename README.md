@@ -1,6 +1,6 @@
 # Assembly-Game
 **DanceToTheVinyl**: An interactive game made with Motorola 68000 assembly language
-The context of the game is that you play Michael Jackson; vinyl records fall from the top, some of which are genuine records while others are broken ones. Each time MJ catches a genuine record, he will start singing one of his popular/my favorite songs, and he'll also dance to the beats. You are responsible for controlling MJ, i.e., making him dodge the broken records and catch the genuine ones, all while the counter is going on, by the end of which you must collect 10 of MJ's songs. This game runs at 20 fps.
+The context of the game is that you play Michael Jackson; vinyl records fall from the top, some of which are genuine records while others are broken ones. Each time MJ catches a genuine record, he will start singing one of his popular/my favorite songs, and he'll also dance to the beats. You are responsible for controlling MJ, i.e., making him dodge the broken records and catch the genuine ones, all while the counter is going on, by the end of which you must collect 10 of MJ's songs. You have 60 seconds to collect 10 songs and make sure to dance sufficiently so that you entertain the crowd with MJ's charismatic dance and singing!
 
 Video of gameplay: https://drive.google.com/file/d/1VM5agTEWF2JABMCG8tbehukb4tf8hjbg/view
 
@@ -8,8 +8,8 @@ Why I worked on this project:
 I did this project in 3 weeks as part of my assembly course at Florida Interactive Entertainment Academy. The project was implemented on Eas68K, which is a simulator for 68000 made for educational purposes. I am grateful to Jeremy Paulding for mentoring me and teaching the core concepts of assembly programming. 
 
 **Technical challenges**
-Nothing comes readymade with assembly, no libraries or frameworks. 
-General Optimization: With the limitations of the simulator and the hardware I was testing on, to hit at least 20 fps, I needed to optimize the most expensive and frequent operations as much as possible. The most expensive and most frequent being putting a pixel on screen. The hardest part was optimizing the bitmap rendering.
+Nothing comes readymade with assembly, no libraries or frameworks. When making a game, especially when the simulator possess its own limitations, optimization becomes critical. Can you call your game a game if each iteration of your game loop takes 5 seconds? 5 seconds of frame time equates to 0.2 fps. I would not call a game running at 0.2 fps a game, would you? 
+My professor Jeremy had given us a benchmark of 20fps to target, he chose this magic number by factoring in the speed of the simulator - how many cycles can Easy68k run in 1 second? The capabilities of the hardware - Yes, the choice of hardware does matter. To hit at least 20 fps, I needed to optimize the most expensive and frequent operations as much as possible. The most expensive and most frequent being putting a pixel on screen. This was also the hardest part of my optimization efforts. 
 
 # **Specific challenges**
 
@@ -24,10 +24,6 @@ General Optimization: With the limitations of the simulator and the hardware I w
 11. **7-segment displays**: There was no inbuilt support for displaying 7-segment displays. So for each of the 10 numbers 0 through 9, I determined what their bitmasks would be so that if I do _and_ with the 7 bits representing the 7 segments, I am able to get the necessary segments on. I had a 2-digit 7-segment display, so I had additional logic for determining the values to be displayed on the displays. So I divide the 2-digit number by 10; the resultant lower word contains the quotient, which goes in the first segment, and then the result is logically right-shifted twice by 8 to get the remainder, which is in the upper word. One of the input registers contains the x offsets; the upper word contains the right offset, and the lower word contains the left offset. This offset information is used to draw the segment. Implemented function pointers by making dedicated subroutines for displaying each segment a through f. I have a memory allocation of 7*4 = 28 bytes, where 4 bytes each hold the address of each of the subroutines of displaying a segment. This memory is labelled SevenSegmentFunctions, and using offsets of 4 bytes, it is used to jump to required draw subroutines for the segments.
 12. **Sound**: I used the API provided by Easy68K, allowing me to use the DirectX player to load .wav files. I loaded 10 MJ songs into the DirectX player, and the order they have been loaded into the player is also the index that can be used to tell the DirectX player to play that particular song. So using a var CurrentSong = 0, I could increment it when needed and play the necessary song.
 
-
-
-**Gameplay** : 
-You have 60 seconds to collect 10 songs and make sure to dance sufficiently so that you entertain the crowd with MJ's charismatic dance and singing!
 
 I am a huge huge Michael Jackson fan (as are millions of people even today), so when in my Game programming class Jeremy asked the each of us to take up a game idea and create a game design document of either an existing game or an original, I first thought of one of those standard mobile games where you have a basket and you must dodge the bombs while collecting the fruits. I reconciled that basic premise with my deep desire to make a Michael Jackson game. Throughtout the 3 weeks of development I listend to so much of MJ that it made the development process a thrilling journey! 
 Three cheers for the King of Pop!
