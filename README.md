@@ -2,6 +2,8 @@
 **DanceToTheVinyl**: An interactive game made with Motorola 68000 assembly language
 The context of the game is that you play Michael Jackson; vinyl records fall from the top, some of which are genuine records while others are broken ones. Each time MJ catches a genuine record, he will start singing one of his popular/my favorite songs, and he'll also dance to the beats. You are responsible for controlling MJ, i.e., making him dodge the broken records and catch the genuine ones, all while the counter is going on, by the end of which you must collect 10 of MJ's songs. You have 60 seconds to collect 10 songs and make sure to dance sufficiently so that you entertain the crowd with MJ's charismatic dance and singing!
 
+![image](https://github.com/user-attachments/assets/38195a15-3786-4312-ab3c-df9d11ea2b80)
+
 Video of gameplay: https://drive.google.com/file/d/1VM5agTEWF2JABMCG8tbehukb4tf8hjbg/view
 
 Why I worked on this project:
@@ -27,8 +29,6 @@ My professor Jeremy had given us a benchmark of 20fps to target, he chose this m
 
 I am a huge huge Michael Jackson fan (as are millions of people even today), so when in my Game programming class Jeremy asked the each of us to take up a game idea and create a game design document of either an existing game or an original, I first thought of one of those standard mobile games where you have a basket and you must dodge the bombs while collecting the fruits. I reconciled that basic premise with my deep desire to make a Michael Jackson game. Throughtout the 3 weeks of development I listend to so much of MJ that it made the development process a thrilling journey! 
 Three cheers for the King of Pop!
-
-![image](https://github.com/user-attachments/assets/38195a15-3786-4312-ab3c-df9d11ea2b80)
 
 ![image](https://github.com/user-attachments/assets/c726c476-9088-4344-af24-964d23502b35)
 
